@@ -1,0 +1,71 @@
+SUMADOR
+def sumar (n):
+    if n:
+        y = n[1:]
+        return n[0] + sumar(n[1:])
+    else:
+        return 0
+
+print (sumar ([1,2,3,4,15]))
+INVERTIR
+def invertir (n):
+    if n:
+        return (invertir(n[1:]))+n[0:1]
+    else:
+        return [ ]
+
+print (invertir ([1,2,3,4,15]))
+COMPARAR LISTAS
+def igualLista (n,v):
+    if n==v:
+        return "true"
+    else:
+        return "false"
+
+print (igualLista ([1,2], [1,2]))
+
+MOSTRAR UBICACION
+def mostrarUbicacion (n,v):
+        return n[v]
+
+print (mostrarUbicacion ([1,2,3,4,5], -1))
+
+MAYOR 
+
+def mayor (n):
+    if n:
+        if n[0]>(mayor(n[1:])):
+            return (n[0])
+        else:
+            return (mayor(n[1:]))
+    else:
+        return 0
+
+
+print (mayor([1,2,37,4,5]))
+
+
+
+CONTAR PARES 
+def contarpares (n):
+    if n:
+        if n[0]%2==0:
+            return 1 + contarpares(n[1:])
+        else:
+            return 0 + contarpares(n[1:])
+    else:
+        return 0
+
+
+print (contarpares([1,2,38,4,5]))
+
+
+CUADRADOS
+
+def cuadrados (n):
+    if n:
+        return [(n[0]*n[0])]+(cuadrados(n[1:]))
+    else:
+        return []
+
+print (cuadrados ([1,2,3,4,5]))
